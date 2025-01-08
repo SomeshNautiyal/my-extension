@@ -1,11 +1,40 @@
+<!-- popup.html -->
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Popup</title>
-  <script src="popup.js" defer></script>
+  <title>Toggle Background</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 10px;
+    }
+    button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+    }
+  </style>
+  <style>
+    .main-div {
+        min-height: 800px; /* Adjust height */
+        min-width: 800px;  /* Adjust width */
+    }
+</style>
 </head>
 <body>
-  <h1>Hello Somesh, here is your Extension!</h1>
-  <button id="changeColor">Change Background Color</button>
+  <div id="main-div">
+    <button id="closeExtension">Close</button>
+    <h1>Toggle Background Color</h1>
+    <p>Click the button below to change the background color of the page.</p>
+    <div id="customModal" class="custom-modal">
+      <h2>Choose a new background color:</h2>
+      <input type="color" id="newColorInput">
+      <button id="applyColorButton">Apply Color</button>
+      <button id="resetColorButton">Reset Color</button>
+    </div>
+    <div id="messageContainer"></div>
+  </div>
+  <script src="popup.js"></script>
 </body>
 </html>
